@@ -5,8 +5,8 @@ let pascal = (rows) => {
     let previousRow;
 
     //Test cases for invalid numbers
-    if (rows === 0 || rows === 1) {
-        console.log("Invalid input of 0 or 1.");
+    if (rows <= 1) {
+        console.log("Invalid input: value must be greater than 1");
         return false;
     }
 
@@ -35,6 +35,10 @@ let pascal = (rows) => {
 }
 
 //Test Cases:
+console.log("Test Case: Negative number of rows should be an invalid input.");
+console.assert(pascal(-5) === false, "Negative numbers are not valid.");
+console.log("");
+
 console.log("Test Case: 0 rows should be an invalid input.");
 console.assert(pascal(0) === false, "0 isn't a valid number of rows.");
 console.log("");
